@@ -1,29 +1,26 @@
+
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Main {
-    public static CarDealerShipUI ui = new CarDealerShipUI();
+    private static CarDealerShipUI ui;
     private static CRUD db;
-
     public static void main(String[] args) {
+
         db = new CRUD("localhost", "3306", "CarDealership", "root", "Shoreline@_4321");
         var data = new CarDealershipData(db);
-        data.removeVehicle(13);
 
-        var vehicle = ui.makeCustomVehicle();
-        data.saveVehicle(vehicle);
+        var ui = new CarDealerShipUI(data);
+        ui.mainMenu();
 
+//        data.removeVehicle(15);
 
-//        Vehicle v = new Vehicle(
-//                -1,
-//                "ABC123",
-//                "Acura",
-//                "MDX",
-//                "Silver",
-//                2005,
-//                12345.67
-//        );
-//        data.saveVehicle(v);
+//        var vehicle = ui.makeCustomVehicle();
+//        data.saveVehicle(vehicle);
+
+//        Contract c = ui.makeContract();
+//        data.saveContract(c);
+
 //        var vehicles = data.getVehiclesByMakeModel(
 //                ui.getString("MAKE"),
 //                ui.getString("MODEL")

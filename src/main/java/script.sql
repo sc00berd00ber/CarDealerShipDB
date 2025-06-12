@@ -2,7 +2,7 @@ CREATE DATABASE  IF NOT EXISTS `cardealership` /*!40100 DEFAULT CHARACTER SET ut
 USE `cardealership`;
 -- MySQL dump 10.13  Distrib 8.0.41, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: cardealership
+-- Host: 127.0.0.1    Database: CarDealership
 -- ------------------------------------------------------
 -- Server version	9.2.0
 
